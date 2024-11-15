@@ -11,9 +11,6 @@ export default {
       }
     }
   },
-  plugins: [
-    // eslint-disable-next-line no-undef
-    require('daisyui'),
-  ],
+  plugins: [require("daisyui")],
 }
 
