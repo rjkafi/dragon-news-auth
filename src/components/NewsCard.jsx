@@ -2,6 +2,7 @@
 
 import { FaStar, FaEye, FaRegBookmark } from 'react-icons/fa';
 import { IoShareSocialSharp } from 'react-icons/io5';
+import { Link } from 'react-router-dom';
 
 
 const NewsCard = ({ news }) => {
@@ -37,9 +38,9 @@ const NewsCard = ({ news }) => {
   className="w-full h-52 object-cover rounded-lg mt-4 "
 />
 
-<p className="text-gray-600 mt-2 text-sm line-clamp-3">
-  {details}
-  <span className="text-blue-500 cursor-pointer ml-1">Read More</span>
+<p className="text-gray-600 mt-2 text-sm ">
+  {details.slice(0,150)}....{" "}
+  <Link to={`/news/${news._id}`} className="text-blue-500 cursor-pointer ml-1">Read More</Link>
 </p>
 
 <hr className='mt-5' />
